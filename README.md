@@ -34,10 +34,10 @@
 ### supportPost table
 |Culumn|Type|Oprion|
 |------|----|------|
-|creater_id|string|
 |title|string|
 |text|string|
 |SupportMoney|integer|
+|creater_id|string|
 
 
 ### post table

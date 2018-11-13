@@ -10,11 +10,6 @@
 
 ## Database
 
-### patrons table
-|Culumn|Type|Options|
-|------|----|-------|
-|username|string|null: false|
-
 ### support table
 |Culumn|Type|Options|
 |------|----|-------|
@@ -23,13 +18,16 @@
 |SupportMoney|integer|
 
 
-### creaters table
+### users table
 |Culumn|Type|Oprion|
 |------|----|------|
 |username|string|null: false|
 |profileImage|string|
 |headerProfileImage|string|
 |profile|string|
+
+has_many post table
+has_many support table
 
 ### supportPost table
 |Culumn|Type|Oprion|

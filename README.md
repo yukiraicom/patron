@@ -27,6 +27,7 @@
 |profile|string|
 
 has_many post table
+
 has_many support table
 
 ### supportPost table

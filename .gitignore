@@ -20,4 +20,5 @@
 .ruby-version
 
 *.swp
-.*.swp
+.*.*.swp
+

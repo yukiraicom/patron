@@ -3,20 +3,9 @@
 * Ruby version
 2.5.1
 
-* Rails version
-5.2.1
-
 # patron
 
 ## Database
-
-### support table
-|Culumn|Type|Options|
-|------|----|-------|
-|patreon_id|integer|null: false|
-|creater_id|integer|null: false|
-|SupportMoney|integer|
-
 
 ### users table
 |Culumn|Type|Oprion|
@@ -29,6 +18,14 @@
 has_many post table
 
 has_many support table
+
+### support table
+|Culumn|Type|Options|
+|------|----|-------|
+|patreon_id|integer|null: false|
+|creater_id|integer|null: false|
+|SupportMoney|integer|
+
 
 ### supportPost table
 |Culumn|Type|Oprion|

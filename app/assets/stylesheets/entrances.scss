@@ -1,11 +1,26 @@
 // Place all the styles related to the entrances controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-header{
+.header{
   background-color: white;
-  display: flex;
+    // clear: both;
   p{
     margin-left:10px;
+    float: left;
   }
-  
+  &__light{
+    display: flex;
+    float: right;
+  }
+}
+.header:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+.hello{
+  font-size: 35px;
+  text-align: center;
 }

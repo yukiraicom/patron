@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   end
   
   def create
-    # @user
-    SupportSupport.new().supportCount
+    User.create(userParams)
+  end
+
+  private
+  def userParams
+    binding.pry
+    params.require(:user).permit(:username, :email, :password)
   end
 end

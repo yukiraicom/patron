@@ -1,5 +1,5 @@
 module Notice
-  def twieet
+  def twieet(user)
     require 'twitter'
 
     client = Twitter::REST::Client.new do |config|
@@ -9,6 +9,6 @@ module Notice
       config.access_token_secret = ENV['access_token_secret']
     end
 
-    client.update("test")
+    client.update(user+"さん")
   end
 end

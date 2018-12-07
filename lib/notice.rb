@@ -1,5 +1,5 @@
 module Notice
-  def tweet
+  def twieet
     require 'twitter'
 
     client = Twitter::REST::Client.new do |config|

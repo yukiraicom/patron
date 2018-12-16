@@ -10,7 +10,8 @@
     .header
       %p PATRON
       .header__light
-        %p Search
+        = form_tag('/search', method: "post") do
+          = text_field :user, :name
         %p Start my page
         %p Explore Creaters
         = link_to "Sign up", new_user_registration_path

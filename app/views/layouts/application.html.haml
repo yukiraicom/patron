@@ -8,7 +8,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .header
-      %p PATRON
+      = link_to "PATRON", root_path
       .header__light
         = form_tag('/search', method: "post") do
           = text_field :user, :username

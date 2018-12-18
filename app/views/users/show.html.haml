@@ -1,3 +1,4 @@
 %p #{@user.username}さんのページ
 
-= form_for [@user, @support], 
+= form_for [@user, @support], url: supports_path(@user) do |f|
+  = f.submit "パトロンになる"

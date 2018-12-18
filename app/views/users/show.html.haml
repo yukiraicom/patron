@@ -1,7 +1,8 @@
 %p #{@user.username}さんのページ
 
 - if @is_supported
-  %p パトロンを解除する
+  = form_for [@user, @support], url: support_path, method: "delete" do |f|
+    = f.submit "パトロンを解除する"
 - else
   = form_for [@user, @support], url: supports_path(@user) do |f|
     = f.submit "パトロンになる"

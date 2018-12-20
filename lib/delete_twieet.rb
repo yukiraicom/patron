@@ -1,5 +1,5 @@
-module Notice
-  def self.twieet(user)
+module TwieetDelete
+  def self.TwieetDelete
     require 'twitter'
 
     client = Twitter::REST::Client.new do |config|
@@ -9,6 +9,15 @@ module Notice
       config.access_token_secret = ENV['access_token_secret']
     end
 
-    client.update("@ "+user+"さん、1件のサポートが届いています。")
+    screen_name = '@DevPatron'
+
+    while true do
+      statuses = api.GetUserTimeline(screen_name=screen_name)
+      for s in statuses do
+        print(s.text, s.created_at)
+        api.DestroyStatus(s.id)
+      end
+    end
+
   end
 end
